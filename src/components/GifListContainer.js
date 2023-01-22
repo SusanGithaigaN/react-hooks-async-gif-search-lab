@@ -16,7 +16,7 @@ function GifListContainer (){
         .then(response => response.json())
         // .then((data)=> setGif(data))
         .then(({data}) => {
-            const gifs = data.slice(0,3).map((gif)=>({url: gif.images.original.url }));
+            const gifs = data.slice(0,10).map((gif)=>({url: gif.images.original.url }));
             setGif(gifs);
         })
         
